@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.jammuwalastore.fragment.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/home_fragment">
+
+        <!--    <action
+                android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+                app:destination="@id/nav_home_second" />-->
+    </fragment>
+
+
+    <!--  <fragment
+          android:id="@+id/nav_home_second"
+          android:name="com.app.minzareuk.ui.home.HomeSecondFragment"
+          android:label="@string/home_second"
+          tools:layout="@layout/fragment_home_second">
+          <action
+              android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+              app:destination="@id/nav_home" />
+
+          <argument
+              android:name="myArg"
+              app:argType="string" />
+      </fragment>-->
+
+    <fragment
+        android:id="@+id/nav_my_cart"
+        android:name="com.jammuwalastore.fragment.CartFragment"
+        android:label="@string/menu_my_cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/nav_my_orders"
+        android:name="com.jammuwalastore.fragment.MyOrdersFragment"
+        android:label="@string/menu_my_orders"
+        tools:layout="@layout/fragment_my_orders" />
+
+    <fragment
+        android:id="@+id/nav_my_profile"
+        android:name="com.jammuwalastore.fragment.ProfileFragment"
+        android:label="@string/menu_my_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/nav_contact_us"
+        android:name="com.jammuwalastore.fragment.InquiryFragment"
+        android:label="@string/menu_contact_us"
+        tools:layout="@layout/fragment_inquiry" />
+
+</navigation>
