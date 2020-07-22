@@ -61,37 +61,9 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         progressLayout = view.findViewById(R.id.progressLayout)
         dbHandler = DBHandler(view.context)
-
-        setupCatUi()
-
         setupUi()
     }
 
-    private fun setupCatUi() {
-        progressLayout?.visibility = View.VISIBLE
-        slider()
-        rvProductsList.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrolled(
-                recyclerView: RecyclerView,
-                dx: Int, dy: Int
-            )
-            {
-                super.onScrolled(recyclerView, dx, dy)
-                val linearLayoutManager =
-                    rvCategoryList.layoutManager as LinearLayoutManager?
-                totalItemCount = linearLayoutManager!!.itemCount
-                lastVisibleItem = linearLayoutManager.findLastVisibleItemPosition()
-                if (!loading && totalItemCount <= lastVisibleItem + visibleThreshold) { //End of the items
-                    pageNumber += 1
-                    productsData()
-                    loading = true
-                }
-            }
-        })
-        setupAdapter()
-        pageNumber += 1
-        productsData()
-    }
 
 
     private fun setupUi() {

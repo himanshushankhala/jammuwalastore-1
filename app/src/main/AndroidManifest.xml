@@ -19,6 +19,7 @@
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme.Base"
         android:usesCleartextTraffic="true">
+        <activity android:name=".fragment.CategoryItemActivity"></activity>
         <activity android:name=".MainLayout1" />
         <activity android:name=".SearchResultActivity" />
         <activity android:name=".SearchActivity" />

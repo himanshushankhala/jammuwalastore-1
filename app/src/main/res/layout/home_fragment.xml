@@ -103,17 +103,7 @@
                 android:textColor="@color/colorWhite"
                 android:textSize="@dimen/_14sdp" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvCategoryList"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:paddingStart="@dimen/_2sdp"
-                android:paddingEnd="@dimen/_2sdp"
-                android:paddingBottom="@dimen/_10sdp"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:spanCount="1"
-                tools:listitem="@layout/category_product_list" />
+            <include layout="@layout/activity_category_item"/>
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvProductsList"
